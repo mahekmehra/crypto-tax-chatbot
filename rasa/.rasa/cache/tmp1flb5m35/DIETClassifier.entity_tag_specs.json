@@ -1,0 +1,52 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-buy_price",
+      "2": "I-buy_price",
+      "3": "L-buy_price",
+      "4": "U-buy_price",
+      "5": "B-crypto",
+      "6": "I-crypto",
+      "7": "L-crypto",
+      "8": "U-crypto",
+      "9": "B-date",
+      "10": "I-date",
+      "11": "L-date",
+      "12": "U-date",
+      "13": "B-quantity",
+      "14": "I-quantity",
+      "15": "L-quantity",
+      "16": "U-quantity",
+      "17": "B-sell_price",
+      "18": "I-sell_price",
+      "19": "L-sell_price",
+      "20": "U-sell_price",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-buy_price": 1,
+      "I-buy_price": 2,
+      "L-buy_price": 3,
+      "U-buy_price": 4,
+      "B-crypto": 5,
+      "I-crypto": 6,
+      "L-crypto": 7,
+      "U-crypto": 8,
+      "B-date": 9,
+      "I-date": 10,
+      "L-date": 11,
+      "U-date": 12,
+      "B-quantity": 13,
+      "I-quantity": 14,
+      "L-quantity": 15,
+      "U-quantity": 16,
+      "B-sell_price": 17,
+      "I-sell_price": 18,
+      "L-sell_price": 19,
+      "U-sell_price": 20,
+      "O": 0
+    },
+    "num_tags": 21
+  }
+]

@@ -1,0 +1,62 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - Hi
+    - Hello
+    - Hey there
+    - Good morning
+    - Hi bot
+    - ok
+    - thankyou
+
+- intent: goodbye
+  examples: |
+    - Bye
+    - Goodbye
+    - See you later
+    - Exit
+    - Catch you later
+    - byee
+
+- intent: get_price
+  examples: |
+    - What’s the price of [BTC](crypto) today?
+    - What is the price of [bitcoin](crypto) today?
+    - Price of [bitcoin](crypto)?
+    - How much is [ETH](crypto) today?
+    - What’s the price of [Ethereum](crypto) in [INR](currency) today?
+    - What’s [BTC](crypto) price in rupees?
+    - What was the price of [BTC](crypto) on [01-01-2024](date)?
+    - How much was [Ethereum](crypto) on [15-03-2023](date)?
+    - What’s the price of [ETH](crypto) in [INR](currency) today?
+    - What is the price of [BTC](crypto) in [USD](currency) today?
+    - How much is [bitcoin](crypto) today?
+    - What’s the price of [ETH](crypto) on [24-06-2024](date)?
+    - Price of [ETH](crypto)?
+    - What’s the price of [Ethereum](crypto) in rupees today?
+    - How much is [ETH](crypto) in [INR](currency)?
+    - What is [BTC](crypto) price in [INR](currency) today?
+    - What’s the price of [bitcoin](crypto) in [INR](currency)?
+
+- intent: calculate_tax
+  examples: |
+    - What’s my tax if I sold [1](quantity) [BTC](crypto) at [75000](sell_price) after buying at [40000](buy_price)?
+    - Calculate tax for [0.5](quantity) [ETH](crypto) bought at [2000](buy_price) sold at [3000](sell_price)
+    - Tax on [2](quantity) [bitcoin](crypto) from [40000](buy_price) to [45000](sell_price)
+    - How much tax if I sold [1](quantity) [BTC](crypto) at [75000](sell_price) after buying at [40000](buy_price)?
+    - What’s my tax in [INR](currency) if I sold [1](quantity) [BTC](crypto) at [5000000](sell_price) after buying at [4000000](buy_price)?
+    - Calculate tax in rupees for [0.5](quantity) [ETH](crypto) bought at [150000](buy_price) sold at [200000](sell_price)
+    - Tax in [INR](currency) for [1](quantity) [bitcoin](crypto) sold at [5500000](sell_price) bought at [4500000](buy_price)
+    - How much tax in rupees if I sold [2](quantity) [BTC](crypto) at [6000000](sell_price) after buying at [5000000](buy_price)?
+
+- intent: out_of_scope
+  examples: |
+    - What’s the weather like?
+    - Tell me a joke
+    - Who won the last election?
+    - What is 3 plus 5?
+    - How much is 10 times 4?
+    - who is the president of india?
+    - what is 6+5?

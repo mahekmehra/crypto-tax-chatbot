@@ -1,0 +1,63 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - get_price
+  - calculate_tax
+  - out_of_scope
+
+entities:
+  - crypto
+  - quantity
+  - buy_price
+  - sell_price
+  - date
+  - currency
+
+slots:
+  crypto:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: crypto
+  quantity:
+    type: float
+    mappings:
+    - type: from_entity
+      entity: quantity
+  buy_price:
+    type: float
+    mappings:
+    - type: from_entity
+      entity: buy_price
+  sell_price:
+    type: float
+    mappings:
+    - type: from_entity
+      entity: sell_price
+  date:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: date
+  currency:
+    type: text
+    initial_value: "USD"  # Default value
+    mappings:
+    - type: from_entity
+      entity: currency
+    - type: custom  # Fallback to "USD" if no entity
+      value: "USD"
+
+responses:
+  utter_greet:
+  - text: "Hello! I’m your Crypto Tax Calculator. Ask me about crypto prices or taxes!"
+  utter_goodbye:
+  - text: "Goodbye!"
+  utter_out_of_scope:
+  - text: "This is out of my scope."
+
+actions:
+  - action_get_price
+  - action_calculate_tax

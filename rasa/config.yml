@@ -1,0 +1,24 @@
+language: en
+
+pipeline:
+- name: WhitespaceTokenizer
+- name: RegexFeaturizer
+- name: LexicalSyntacticFeaturizer
+- name: CountVectorsFeaturizer
+- name: DIETClassifier
+  epochs: 100
+- name: EntitySynonymMapper
+- name: ResponseSelector
+  epochs: 100
+
+policies:
+- name: RulePolicy
+  core_fallback_threshold: 0.4
+  core_fallback_action_name: "action_default_fallback"
+  priority: 10    # High priority for rules
+- name: MemoizationPolicy
+  priority: 5
+- name: TEDPolicy
+  epochs: 100
+  priority: 1    # Lower priority to avoid interference
+assistant_id: 20250408-204555-complete-garage

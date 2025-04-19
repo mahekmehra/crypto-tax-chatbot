@@ -1,0 +1,51 @@
+version: "3.1"
+
+stories:
+- story: greet path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: action_listen
+
+- story: goodbye path
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: get price path
+  steps:
+  - intent: get_price
+    entities:
+    - crypto
+  - action: action_get_price
+
+- story: get price with currency
+  steps:
+  - intent: get_price
+    entities:
+    - crypto
+    - currency
+  - action: action_get_price
+
+- story: get price with date
+  steps:
+  - intent: get_price
+    entities:
+    - crypto
+    - date
+  - action: action_get_price
+
+- story: calculate tax path
+  steps:
+  - intent: calculate_tax
+    entities:
+    - crypto
+    - quantity
+    - buy_price
+    - sell_price
+  - action: action_calculate_tax
+
+- story: out of scope path
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
